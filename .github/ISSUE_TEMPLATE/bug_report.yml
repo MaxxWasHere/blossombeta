@@ -1,0 +1,63 @@
+name: Beta bug report
+description: Report a problem with a Blossom beta build
+title: "[Beta] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for testing Blossom beta. Do **not** paste your license key here.
+
+  - type: input
+    id: version
+    attributes:
+      label: Beta version
+      description: e.g. 2.1.0-beta.1 (from the app title bar or About)
+      placeholder: "2.1.0-beta.1"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Windows version
+      options:
+        - Windows 11
+        - Windows 10
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: What were you doing when it broke?
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: What actually happened
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I downloaded from GitHub Releases or /downloadbeta
+          required: true
+        - label: I installed WebView2 if the window was blank
+          required: false
+        - label: I searched existing issues
+          required: false

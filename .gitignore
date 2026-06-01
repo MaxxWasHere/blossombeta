@@ -1,0 +1,14 @@
+# Never commit binaries or secrets to this repo (releases only via GitHub Releases UI)
+*.exe
+*.zip
+*.7z
+*.msi
+.env
+.env.*
+!.env.example
+
+# OS / editor
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.log
